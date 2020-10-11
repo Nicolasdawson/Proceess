@@ -1,0 +1,12 @@
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\bin\Debug\netcoreapp3.1\Portafolio.Modelos.dll
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\obj\Debug\netcoreapp3.1\Portafolio.Datos.csprojAssemblyReference.cache
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\obj\Debug\netcoreapp3.1\Portafolio.Datos.AssemblyInfoInputs.cache
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\obj\Debug\netcoreapp3.1\Portafolio.Datos.AssemblyInfo.cs
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\obj\Debug\netcoreapp3.1\Portafolio.Datos.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\bin\Debug\netcoreapp3.1\Portafolio.Datos.deps.json
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\bin\Debug\netcoreapp3.1\Portafolio.Datos.dll
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\bin\Debug\netcoreapp3.1\Portafolio.Datos.pdb
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\bin\Debug\netcoreapp3.1\Portafolio.Modelos.pdb
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\obj\Debug\netcoreapp3.1\Portafolio.Datos.csproj.CopyComplete
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\obj\Debug\netcoreapp3.1\Portafolio.Datos.dll
+C:\Users\Nicolas Dawson\source\repos\Portafolio\Portafolio.Datos\obj\Debug\netcoreapp3.1\Portafolio.Datos.pdb

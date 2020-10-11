@@ -1,0 +1,141 @@
+﻿@model Portafolio.Modelos.ViewModels.TareaVM
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = "Crear tareas";
+}
+
+
+<form method="post">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.Tarea.Id != 0)
+        {
+            //edit
+            title = "Editar tareas";
+            <input type="hidden" asp-for="Tarea.Id" />
+        }
+        <div class="col-12 border-bottom">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8 pt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Nom_tarea"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Nom_tarea" class="form-control" />
+                    <span asp-validation-for="Tarea.Nom_tarea" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Des_tarea"></label>
+                </div>
+                <div class="col-8">
+                    <textarea asp-for="Tarea.Des_tarea" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Progreso_tarea"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Progreso_tarea" class="form-control" />
+                    <span asp-validation-for="Tarea.Progreso_tarea" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Aprobacion"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Aprobacion" class="form-control" />
+                    <span asp-validation-for="Tarea.Aprobacion" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Justificacion"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Justificacion" class="form-control" />
+                    <span asp-validation-for="Tarea.Justificacion" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Inicio_tarea"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Inicio_tarea" class="form-control" input type="datetime" inputmode=" " />
+                    <span asp-validation-for="Tarea.Inicio_tarea" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Fin_tarea"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Fin_tarea" class="form-control" input type="datetime" />
+                    <span asp-validation-for="Tarea.Fin_tarea" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Comentarios"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Comentarios" class="form-control" />
+                    <span asp-validation-for="Tarea.Comentarios" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tarea.Retraso"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tarea.Retraso" class="form-control" />
+                    <span asp-validation-for="Tarea.Retraso" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    Tipo
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m => m.Tarea.FlujoTareaId, Model.FlujoTareaList, "-Seleccionar un flujo",
+                                                           new { @class = "form-control" })
+                    <span asp-validation-for="Tarea.FlujoTareaId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    @if (Model.Tarea.Id != 0)
+                    {
+                     <partial name="_EditAndBackToListButton" model="Model.Tarea.Id" /> }
+                    else
+                    {
+                    <partial name="_CreateAndBackToListButton" />}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.tiny.cloud/1/9pdzcoj1o82gs6r1i49q2908tz91fd3kcc1rva65b1q0eqb5/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        })
+
+</script>
+
+}
